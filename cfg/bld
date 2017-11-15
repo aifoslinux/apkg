@@ -1,0 +1,12 @@
+# build flags
+
+CPPFLAGS="-D_FORTIFY_SOURCE=2"
+CFLAGS="-march=x86-64 -mtune=generic -Os"
+CXXFLAGS="$CFLAGS"
+LDFLAGS="-Wl,--as-needed"
+MAKEFLAGS="-j$(($(nproc)+1))"
+
+CARCH="x86_64"
+CBUILD="x86_64-pc-linux-musl"
+CHOST="$CBUILD"
+CTARGET="$CHOST"

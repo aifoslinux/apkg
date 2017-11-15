@@ -1,0 +1,20 @@
+PKG=
+VER=
+SRC=
+
+build() {
+    ./configure --prefix=$prefix \
+                --host=$CHOST \
+                --sysconfdir=$cfgdir \
+                --bindir=$bindir \
+                --sbindir=$bindir \
+                --libdir=$libdir \
+                --libexecdir=$libdir \
+                --datadir=$datdir \
+                --datarootdir=$datdir \
+                --includedir=$incdir \
+                --runstatedir=$rundir \
+                --localstatedir=$vardir
+    make
+    make DESTDIR=$PKG_DIR install
+}

@@ -1,0 +1,6 @@
+# /etc/apkg.conf
+
+ARCH="x86_64"
+PKG_EXT="${ARCH}.apkg"
+
+ROOTDIR="/"
